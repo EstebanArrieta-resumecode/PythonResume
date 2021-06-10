@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class="wrapper">
+  <div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <img src="IshgardWP.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="KuganeWP.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="ChocoWP.jpg" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+
+  <ul>
+    <li><a href="main.html">Home</a></li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">DRK</a>
+      <div class="dropdown-content">
+        <a href="drkRot.html">Rotation</a>
+        <a href="drkStat.html">Stats</a>
+        <a href="drkPlay.html">Playstyle</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">WAR</a>
+      <div class="dropdown-content">
+        <a href="warRot.html">Rotation</a>
+        <a href="warStat.html">Stats</a>
+        <a href="warPlay.html">Playstyle</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">GNB</a>
+      <div class="dropdown-content">
+        <a href="gnbRot.html">Rotation</a>
+        <a href="gnbStat.html">Stats</a>
+        <a href="gnbPlay.html">Playstyle</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">PLD</a>
+      <div class="dropdown-content">
+        <a href="pldRot.html">Rotation</a>
+        <a href="pldStat.html">Stats</a>
+        <a href="pldPlay.html">Playstyle</a>
+      </div>
+    </li>
+  </ul>
+
+  <h3>Welcome</h3>
+  <div class="p1">
+    <img class ="img1" src="gnbPimg.jpg"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. 
+      Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. 
+      Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+      Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.</p>
+  </div>
+  <h3 class="txtimg">Welcome</h3>
+  <div class="p2">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. 
+      Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. 
+      Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+      Curabitur sodales ligula in libero. Sed dignissim lacinia nunc</p>  
+    <img class ="img2" src="pldPimage.jpg">
+  </div>
+  <h3>Welcome</h3>
+  <div class="p1">
+    <img class ="img1" src="drkPimage.jpg"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. 
+      Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. 
+      Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+      Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.</p>
+  </div>
+</div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
